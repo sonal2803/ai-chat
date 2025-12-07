@@ -17,6 +17,10 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+app.get("/", (req, res) => {
+  res.send("AI Chat Backend is running!");
+});
+
 const PORT = process.env.PORT || 5000;
 const CHAT_FILE = path.join(__dirname, "chatHistory.json");
 
