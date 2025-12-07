@@ -1,0 +1,124 @@
+/* Make whole page fixed full screen */
+body, html, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background: #0b1120; /* Dark navy */
+  overflow: hidden; /* Prevent page scroll */
+  font-family: "Inter", sans-serif;
+}
+
+/* Center Chat Wrapper */
+.chat-wrapper {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Chat Container */
+.chat-container {
+  width: 55%;
+  height: 90vh;
+  background: #111a2c;
+  padding: 20px;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0px 0px 30px rgba(0,0,0,0.3);
+}
+
+/* Title + Clear Chat button */
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.clear-btn {
+  background: #e03b3b;
+  padding: 8px 16px;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.clear-btn:hover {
+  background: #c22f2f;
+}
+
+/* Scrollable Chat Messages Area */
+.chat-box {
+  flex: 1;
+  background: #0d1729;
+  margin-top: 20px;
+  padding: 15px;
+  border-radius: 12px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Custom scrollbar */
+.chat-box::-webkit-scrollbar {
+  width: 8px;
+}
+.chat-box::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 10px;
+}
+
+/* Message bubbles */
+.message {
+  max-width: 80%;
+  padding: 12px 15px;
+  border-radius: 12px;
+  color: white;
+  line-height: 1.4;
+  font-size: 15px;
+}
+
+/* AI bubble */
+.ai {
+  background: #1e2b47;
+  align-self: flex-start;
+}
+
+/* User bubble */
+.user {
+  background: #3b82f6;
+  align-self: flex-end;
+}
+
+/* Input container */
+.input-area {
+  display: flex;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+input {
+  flex: 1;
+  padding: 14px;
+  border-radius: 10px;
+  border: 1px solid #334155;
+  background: #0d1729;
+  color: white;
+}
+
+button {
+  padding: 12px 22px;
+  background: #3b82f6;
+  border-radius: 10px;
+  border: none;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #2563eb;
+}
